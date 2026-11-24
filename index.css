@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+:root{
+--midnight-violet: #242038ff;
+--midnight-violet-2: rgb(18, 16, 27);
+--lavender-purple: #9067c6ff;
+--lavender-purple-2: rgb(85, 61, 116);
+--soft-periwinkle: #8d86c9ff;
+--pale-slate: #cac4ceff;
+--linen: #f7ece1ff;
+--linen-2: rgb(207, 198, 188);
+}
+
+html{
+    background: linear-gradient(135deg, var(--midnight-violet), var(--midnight-violet-2));
+    background-size: auto;
+}
+body{
+    min-height: 90vh;
+    background: transparent;
+    display: grid;
+    place-items: center;
+    margin: none;
+}
+
+.ball{
+    top: 0px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--lavender-purple), var(--lavender-purple-2));
+    width: min(85vw, 60vh);
+    aspect-ratio: 1;
+    border-radius: 100%;
+    box-shadow: 3px 3px 10px var(--midnight-violet-2),
+                3px 3px 20px var(--midnight-violet-2),
+                3px 3px 30px var(--midnight-violet-2);
+}
+
+.window{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--midnight-violet), var(--midnight-violet-2));
+    width: 40%;
+    height: 40%;
+    border-radius: 100%;
+    border: 3px var(--lavender-purple);
+    box-shadow: inset 2px 1px 5px var(--soft-periwinkle),
+                        1px 0.5px 10px var(--midnight-violet);
+    border-style: none solid solid none;
+    margin-bottom: 30%;
+    margin-right: 30%;
+    font-family: "Akaya Kanadaka", serif;
+    font-size: clamp(20px, 4vw, 36px);
+    color: var(--linen);
+    text-align: center;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+#ball-el{
+    margin: 10px 20px;
+    text-shadow: 0px 0px 2px var(--soft-periwinkle),
+                 0px 0px 4px var(--soft-periwinkle),
+                 0px 0px 10px var(--soft-periwinkle);
+}
+
+.prism {
+  margin-top: 20%;
+  display: block;
+  overflow: visible;
+}
+
+.akaya-kanadaka-regular {
+  font-family: "Akaya Kanadaka", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+}
+
+.shake {
+    animation: shake 0.3s ease-in-out;
+}
